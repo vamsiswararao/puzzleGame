@@ -1,0 +1,39 @@
+.login-container {
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 500px;
+  width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px black;
+}
+
+.login-btn {
+  background-color: blue;
+  cursor: pointer;
+  align-self: center;
+  height: 48px;
+  width: 120px;
+  border: none;
+  outline: none;
+  margin: 6px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.redirect-text {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 500;
+}

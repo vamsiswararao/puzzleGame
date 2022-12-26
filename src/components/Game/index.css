@@ -1,0 +1,29 @@
+.game-Container {
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  margin: 20px;
+}
+
+.Container {
+  margin: 5px 0px;
+  grid-template-columns: auto auto auto auto;
+  display: grid;
+  position: relative;
+  padding: 15px;
+  cursor: default;
+  touch-action: none;
+  background: #ffffff;
+  border-radius: 12px;
+  width: 400px;
+  height: 400px;
+  box-shadow: 10px 5px 5px brown;
+}
+
+.Container-Sub {
+  width: 79px;
+  height: 79px;
+  margin-right: 15px;
+  border-radius: 10px;
+  background-color: #000000;
+}
