@@ -1,0 +1,13 @@
+.tab-button {
+  height: 34px;
+  width: 120px;
+  background-color: transparent;
+  color: #ffffff;
+  outline: none;
+  border: none;
+}
+
+.active {
+  color: blue;
+  border-bottom: solid 2px blue;
+}

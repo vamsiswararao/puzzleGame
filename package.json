@@ -19,6 +19,8 @@
     "react-router-dom": "5.2.0",
     "react-swap": "2.0.3",
     "react-toastify": "9.1.1",
+    "sweetalert": "2.1.2",
+    "sweetalert-react": "0.4.11",
     "uuid": "9.0.0"
   },
   "devDependencies": {

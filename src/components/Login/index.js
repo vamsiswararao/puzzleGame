@@ -28,10 +28,10 @@ class Login extends Component {
     } else {
       const data = localStorage.getItem('userDetails')
       const userData = JSON.parse(data)
+      console.log(userData, 'news')
       const userLogin = userData.filter(
         each => each.email === email && each.password,
       )
-      console.log(userLogin)
       if (userLogin.length === 0) {
         console.log('invalid')
       } else {

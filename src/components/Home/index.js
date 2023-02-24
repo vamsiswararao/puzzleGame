@@ -6,10 +6,13 @@ import './index.css'
 
 class Home extends Component {
   render() {
-    const details = localStorage.getItem('Details')
-    const user = JSON.parse(details)
+    const details = localStorage.getItem('userDetails')
+    const users = JSON.parse(details)
+    localStorage.setItem('user', JSON.stringify(users))
+    const person = localStorage.getItem('user')
+    const user = JSON.parse(person)
     const onClickButton = () => {
-      localStorage.removeItem('Details')
+      localStorage.removeItem('user')
       const {history} = this.props
       history.replace('/SignUp')
     }

@@ -1,7 +1,8 @@
 import './index.css'
 
 import {Component} from 'react'
-import {v4 as uuidv4} from 'uuid'
+import {v4} from 'uuid'
+import swal from 'sweetalert'
 
 // import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 
@@ -53,29 +54,21 @@ class Signup extends Component {
 
   onSubmitSinUp = event => {
     event.preventDefault()
-    const {
-      name,
-      email,
-      phone,
-      password,
-      date,
-      address,
-      signupDetails,
-    } = this.state
+    const {name, email, phone, password, date, address} = this.state
 
     if (name === '') {
-      console.log('name field is required')
+      swal('name field is required')
     } else if (email === '') {
-      console.log('email field is required')
+      swal('email field is required')
     } else if (password === '') {
-      console.log('password field is required')
+      swal('password field is required')
     } else if (date === '') {
-      console.log('date field is required')
+      swal('date field is required')
     } else if (address === '') {
-      console.log('address field is required')
+      swal('address field is required')
     } else {
       const newSignupDetails = {
-        id: uuidv4(),
+        id: v4(),
         name,
         email,
         phone,
@@ -83,16 +76,27 @@ class Signup extends Component {
         date,
         address,
       }
-      console.log(newSignupDetails)
+
       this.setState(prevState => ({
         signupDetails: [...prevState.signupDetails, newSignupDetails],
-        name: '',
-        phone: '',
       }))
-      localStorage.setItem('userDetails', JSON.stringify(signupDetails))
+      localStorage.setItem('Details', JSON.stringify([newSignupDetails]))
       const {history} = this.props
       history.replace('/')
-      localStorage.setItem('Details', JSON.stringify([newSignupDetails]))
+      /* swal({
+        title: 'Good job!',
+        text: 'You clicked the button!',
+        icon: 'success',
+        button: 'Click',
+      }).then(() => {
+        // const {signupDetails} = this.state
+        // localStorage.setItem('userDetails', JSON.stringify(signupDetails))
+        localStorage.setItem('userDetails', JSON.stringify([newSignupDetails]))
+        const {history} = this.props
+        history.replace('/')
+      }) */
+      // const {history} = this.props
+      // history.replace('/')
     }
   }
 

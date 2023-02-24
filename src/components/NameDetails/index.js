@@ -2,8 +2,7 @@ import './index.css'
 
 const NameDetails = props => {
   const {jobDetails} = props
-  const {name, address, date, email, phoneNumber} = jobDetails
-  console.log(name, address, date, email)
+  const {name, address, date, email, phone} = jobDetails
   return (
     <>
       <div>
@@ -20,7 +19,7 @@ const NameDetails = props => {
           : <span>{address}</span>
         </li>
         <li className="user">
-          : <span>{phoneNumber}</span>
+          : <span>{phone}</span>
         </li>
       </div>
     </>

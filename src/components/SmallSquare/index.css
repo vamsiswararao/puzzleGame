@@ -3,22 +3,44 @@
   border-radius: 10px;
   background: rgb(232, 138, 69);
   cursor: pointer;
-  position: relative;
+  display: grid;
   user-select: none;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   font-family: Pacifico, cursive;
   text-align: center;
   font-weight: bold;
   z-index: 10;
   font-size: 45px;
+  height: 80px;
   width: 80px;
   transition: transform 0.3s ease 0s;
   animation-duration: 0.75s;
-  height: 80px;
   transform: translate3d(0px, 0px, 0px);
+}
+
+.fourByFour-FillSquare {
+  font-size: 45px;
+  height: 80px;
+  width: 80px;
+}
+
+.fivByFive-Square {
+  font-size: 25px;
+  height: 60px;
+  width: 60px;
+}
+
+.SixBySix-Square {
+  font-size: 35px;
+  height: 50px;
+  width: 50px;
+}
+
+.eightByEight-Square {
+  font-size: 18px;
+  height: 35px;
+  width: 35px;
 }
 
 .EmptySquare {
